@@ -4,14 +4,14 @@ import { RiRocketLine } from "react-icons/ri";
 export const SidebarRight = () => {
   return (
     <div className=" bg-graylight xl:p-6 p-4 sm:px-20  pt-10">
-      <div className="bg-white/10 w-full p-1 rounded-3xl flex flex-wrap items-center justify-between">
+      {/* <div className="bg-white/10 w-full p-1 rounded-3xl flex flex-wrap items-center justify-between">
         <button className="focus:bg-white  lg:py-3 px-8 py-2 w-[50%]  focus:rounded-3xl focus:text-black">
           Custom
         </button>
         <button className="focus:bg-white  lg:py-3 px-8 py-2 w-[50%] focus:rounded-3xl focus:text-black">
           Guided
         </button>
-      </div>
+      </div> */}
       <div className=" pt-10">
         <p
           id="message"
@@ -27,7 +27,7 @@ export const SidebarRight = () => {
         ></textarea>
       </div>
       <div className=" pt-2">
-        <p
+        {/* <p
           id="message"
           className="pb-2"
         >
@@ -38,13 +38,13 @@ export const SidebarRight = () => {
           id="message"
           placeholder="What you don't want the photo"
           className="bg-white/10 border-none bg-graylight ring-1 ring-gray-500 text-white rounded px-2 pt-2 h-10 w-full appearance-none focus:outline-none resize-none"
-        ></textarea>
+        ></textarea> */}
         <div className="pt-2">
           <p className="pb-2">Imagen Ratio</p>
           <div className="flex items-end gap-4">
-            <span className="border border-gray-500 rounded w-14 h-16 flex items-center justify-center hover:border-primary bg-white/10 text-white">
+            {/* <span className="border border-gray-500 rounded w-14 h-16 flex items-center justify-center hover:border-primary bg-white/10 text-white">
               4:5
-            </span>
+            </span> */}
             <span className="border border-gray-500 rounded w-12 h-14 flex items-center justify-center hover:border-primary bg-white/10 text-white">
               2:3
             </span>
@@ -52,7 +52,7 @@ export const SidebarRight = () => {
               1:1
             </span>
             <span className="border border-gray-500 rounded w-16 h-12 flex items-center justify-center hover:border-primary bg-white/10 text-white">
-              4:5
+              16:9
             </span>
           </div>
         </div>
@@ -76,7 +76,7 @@ export const SidebarRight = () => {
             5
           </span>
         </div>
-        <div>
+        {/* <div>
           <p className="py-2">Imagen type</p>
           <div className="flex gap-4">
             <div>
@@ -110,7 +110,7 @@ export const SidebarRight = () => {
               <p className="pt-1 text-center">Realistic</p>
             </div>
           </div>
-        </div>
+        </div> */}
       </div>
       <div className="lg:pt-20 pt-10 pb-6">
         <button

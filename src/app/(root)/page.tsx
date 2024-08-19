@@ -9,7 +9,7 @@ export default function Home() {
       <Header />
       <div className="grid xl:grid-cols-3 xl:gap-4">
         <div className="xl:col-span-2">
-          <CardAiGenerateImagen />
+          {/* <CardAiGenerateImagen /> */}
           <Galeria />
         </div>
         <div className="py-6 xl:pt-0"><SidebarRight/></div>
