@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export const Galeria = () => {
   return (
-    <section className="py-6">
+    <section className="h-full">
       <div className="bg-graylight lg:p-6 p-2 rounded-2xl">
         <h2 className="text-white p-4">Related Imagen</h2>
         <div className="flex flex-wrap  gap-4 pt-4 justify-center items-center ">

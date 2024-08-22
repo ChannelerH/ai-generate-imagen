@@ -58,11 +58,10 @@ const MainMenu = () => {
 
   return (
     <ul>
-      <li>
-        {routes.map((route) => (
+      {routes.map((route) => (
+        <li key={route.id}>
           <div className="py-2">
             <Link
-              key={route.href}
               href={route.href}
               className="flex items-center flex-wrap px-6 py-4 gap-2 text-sm hover:bg-gray-700/30 hover:rounded-3xl hover:text-white hover:transition-colors hover:duration-300"
             >
@@ -73,8 +72,8 @@ const MainMenu = () => {
               {route.label}
             </Link>
           </div>
-        ))}
-      </li>
+        </li>
+      ))}
     </ul>
   );
 };

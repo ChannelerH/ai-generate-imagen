@@ -5,14 +5,14 @@ import { SidebarRight } from "../componets/shared/sidebarRight";
 
 export default function Home() {
   return (
-    <section>
-      <Header />
-      <div className="grid xl:grid-cols-3 xl:gap-4">
-        <div className="xl:col-span-2">
-          {/* <CardAiGenerateImagen /> */}
+    <section className="container mx-auto px-4">
+      <div className="flex flex-col xl:flex-row gap-4">
+        <div className="xl:w-2/3">
           <Galeria />
         </div>
-        <div className="py-6 xl:pt-0"><SidebarRight/></div>
+        <div className="xl:w-1/3">
+          <SidebarRight/>
+        </div>
       </div>
     </section>
   );
