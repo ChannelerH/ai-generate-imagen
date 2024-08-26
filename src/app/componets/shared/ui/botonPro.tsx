@@ -1,27 +1,21 @@
-import { RiFlashlightFill } from "react-icons/ri";
-import Link from "next/link";
-import { cn } from "@/app/libs/utils";
+import React, { useState } from 'react';
+import PricingModal from '@/app/componets/shared/pricingModal';
 
 
-const BotonPro = () => {
-    
+
+const BotonPro: React.FC = () => {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
   return (
-    <section className="px-2">
-      <div className="bg-[#343373] rounded-3xl p-1 w-full ">
-        <Link
-          href="/"
-          className={cn('flex justify-start items-center gap-2 text-white ')}
-        >
-          <span className="bg-primary rounded-full p-2">
-            <RiFlashlightFill
-              size={25}
-              className="text-white"
-            />
-          </span>
-          Upgrade to Pro
-        </Link>
-      </div>
-    </section>
+    <>
+      <button
+        onClick={() => setIsModalOpen(true)}
+        className="bg-primary text-white py-2 px-4 rounded-full hover:bg-opacity-90 transition-colors duration-300"
+      >
+        Upgrade to Pro
+      </button>
+      <PricingModal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />
+    </>
   );
 };
 
