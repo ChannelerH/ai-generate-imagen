@@ -1,6 +1,6 @@
 import NextAuth, { NextAuthOptions } from "next-auth";
 import GoogleProvider from "next-auth/providers/google";
-import {checkAndSaveUser} from "@/app/servers/user";
+import {checkAndSaveUser} from "@/app/[locale]/servers/user";
 
 const authOptions: NextAuthOptions = {
   // Configure one or more authentication providers

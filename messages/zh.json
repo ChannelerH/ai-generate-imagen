@@ -1,0 +1,31 @@
+{
+    "Metadata": {
+        "title": "人工智能生成图片",
+        "description": "使用人工智能的图片生成器"
+    },
+    "IndexPageText": {
+        "description": "AI生成图片"
+    },
+    "AuthText": {
+        "loginText": "登录",
+        "loginModalDesc": "请继续登录",
+        "loginModalButtonText": "使用谷歌登录",
+        "cancelButtonText": "取消",
+        "toastConfirmText": "确认",
+        "logoutModalDesc": "您确定要登出吗？"
+    },
+    "CommonText": {
+        "loadingText": "正在加载..."
+    },
+    "ImageModuleText": {
+        "placeholderText": "请描述您的图片",
+        "generateButtonText": "生成图片",
+        "downloadButtonText": "下载图片",
+        "inputDescriptionText": "描述您的图片",
+        "imageRatioText": "图片比例",
+        "imageNumberText": "图片数量"
+    },
+    "PaymentModuleText": {
+        "paymentButtonText": "升级到专业版"
+    }
+}

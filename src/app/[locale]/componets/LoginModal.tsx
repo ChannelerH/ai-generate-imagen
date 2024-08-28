@@ -5,7 +5,7 @@ import {Dialog, Transition} from '@headlessui/react'
 import {FcGoogle} from 'react-icons/fc'
 import {whiteLoadingSvg} from './shared/svg'
 import {useCommonContext} from "@/app/context/common-context";
-import {signInUseAuth} from "@/app/utils/nextAuthClient";
+import {signInUseAuth} from "@/app/[locale]/utils/nextAuthClient";
 import {useSession} from "next-auth/react";
 import Image from "next/image";
 

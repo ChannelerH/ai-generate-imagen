@@ -1,4 +1,4 @@
-import {getUserByEmail} from "@/app/servers/user";
+import {getUserByEmail} from "@/app/[locale]/servers/user";
 
 export async function POST(req: Request, res: Response) {
   let json = await req.json();

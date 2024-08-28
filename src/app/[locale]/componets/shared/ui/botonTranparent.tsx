@@ -1,4 +1,4 @@
-import { cn } from "@/app/libs/utils";
+import { cn } from "@/app/[locale]/libs/utils";
 import { RiFileCopyLine } from "react-icons/ri";
 
 

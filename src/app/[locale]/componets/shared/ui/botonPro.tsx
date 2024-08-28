@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import PricingModal from '@/app/componets/shared/pricingModal';
+import PricingModal from '@/app/[locale]/componets/shared/pricingModal';
 
 
 

@@ -1,9 +1,9 @@
 "use client";
 
-import { cn } from "@/app/libs/utils";
+import { cn } from "@/app/[locale]/libs/utils";
 import Link from "next/link";
-import MainMenu from "@/app/componets/shared/mainMenu";
-import BotonPro from "@/app/componets/shared/ui/botonPro";
+import MainMenu from "@/app/[locale]/componets/shared/mainMenu";
+import BotonPro from "@/app/[locale]/componets/shared/ui/botonPro";
 
 interface SidebarProps {
   showMenu: boolean;

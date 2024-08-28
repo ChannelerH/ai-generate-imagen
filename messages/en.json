@@ -1,0 +1,31 @@
+{
+    "Metadata": {
+      "title": "AI Generate Imagen",
+      "description": "Image generator with artificial intelligence"
+    },
+    "IndexPageText": {
+      "description": "AI Generate Imagen"
+    },
+    "AuthText" : {
+        "loginText": "Log in",
+        "loginModalDesc": "Please continue by logging in",
+        "loginModalButtonText": "Login with Google",
+        "cancelButtonText": "cancel",
+        "toastConfirmText": "confirm",
+        "logoutModalDesc": "Are you want to log out ?"
+    },
+    "CommonText": {
+        "loadingText": "Loading..."
+    },
+    "ImageModuleText": {
+        "placeholderText": "write your description",
+        "generateButtonText": "Generate Image",
+        "downloadButtonText": "Download Image",
+        "inputDescriptionText": "Describe your image",
+        "imageRatioText": "Image Ratio",
+        "imageNumberText": "Number of Image"
+    },
+    "PaymentModuleText": {
+        "paymentButtonText": "Upgrade to Pro"
+    }
+}

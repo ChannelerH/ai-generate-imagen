@@ -1,4 +1,4 @@
-import { cn } from "@/app/libs/utils";
+import { cn } from "@/app/[locale]/libs/utils";
 import { RiDownload2Line } from "react-icons/ri";
 
 interface BotonProps {
