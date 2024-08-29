@@ -12,10 +12,8 @@
         "loginModalButtonText": "Login with Google",
         "cancelButtonText": "cancel",
         "toastConfirmText": "confirm",
-        "logoutModalDesc": "Are you want to log out ?"
-    },
-    "CommonText": {
-        "loadingText": "Loading..."
+        "logoutModalDesc": "Are you want to log out ?",
+         "loadingText": "Loading..."
     },
     "ImageModuleText": {
         "placeholderText": "write your description",

@@ -7,19 +7,15 @@ import {whiteLoadingSvg} from './shared/svg'
 import {useCommonContext} from "@/app/context/common-context";
 import {signInUseAuth} from "@/app/[locale]/utils/nextAuthClient";
 import {useSession} from "next-auth/react";
+import { useTranslations } from 'next-intl';
 import Image from "next/image";
 
 const style = {
   loginGoogleBtn: 'inline-flex w-full justify-center items-center space-x-3 rounded-md  px-3 py-2 text-sm font-semibold shadow-sm hover:bg-indigo-500 bg-indigo-600  focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600'
 }
 
-const LoginModal = ({
-                      loadingText='',
-                      redirectPath='',
-                      loginModalDesc='',
-                      loginModalButtonText='',
-                    }) => {
-
+const LoginModal = ({redirectPath='',}) => {
+  const t = useTranslations('AuthText');
   const {data: session, status} = useSession();
   const [loadGoogle, setLoadGoogle] = useState(false)
   const {showLoginModal, setShowLoginModal} = useCommonContext();
@@ -66,7 +62,7 @@ const LoginModal = ({
                     </Dialog.Title>
                     <div className="mt-2">
                       <p className="text-sm text-gray-400">
-                        Please continue by logging in
+                        {t('loginModalDesc')}
                       </p>
                     </div>
                   </div>
@@ -81,7 +77,7 @@ const LoginModal = ({
                       >
                         {whiteLoadingSvg}
                         <p>
-                          Loading...
+                          {t('loadingText')}
                         </p>
                       </button>
                     ) : (
@@ -97,7 +93,7 @@ const LoginModal = ({
                       >
                         <FcGoogle className='text-xl'/>
                         <p>
-                          Login with Google
+                          {t('loginModalButtonText')}
                         </p>
                       </button>
                     )

@@ -1,0 +1,29 @@
+{
+    "Metadata": {
+        "title": "人工智能生成圖片",
+        "description": "使用人工智能的圖片生成器"
+    },
+    "IndexPageText": {
+        "description": "AI生成圖片"
+    },
+    "AuthText": {
+        "loginText": "登錄",
+        "loginModalDesc": "請繼續登錄",
+        "loginModalButtonText": "使用谷歌登錄",
+        "cancelButtonText": "取消",
+        "toastConfirmText": "確認",
+        "logoutModalDesc": "您確定要登出嗎？",
+        "loadingText": "正在加載..."
+    },
+    "ImageModuleText": {
+        "placeholderText": "請描述您的圖片",
+        "generateButtonText": "生成圖片",
+        "downloadButtonText": "下載圖片",
+        "inputDescriptionText": "描述您的圖片",
+        "imageRatioText": "圖片比例",
+        "imageNumberText": "圖片數量"
+    },
+    "PaymentModuleText": {
+        "paymentButtonText": "升級到專業版"
+    }
+}

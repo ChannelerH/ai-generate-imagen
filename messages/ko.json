@@ -1,0 +1,30 @@
+{
+    "Metadata": {
+      "title": "AI 이미지 생성",
+      "description": "인공지능을 사용한 이미지 생성기"
+    },
+    "IndexPageText": {
+      "description": "AI 이미지 생성"
+    },
+    "AuthText" : {
+        "loginText": "로그인",
+        "loginModalDesc": "로그인을 계속해 주세요",
+        "loginModalButtonText": "Google로 로그인",
+        "cancelButtonText": "취소",
+        "toastConfirmText": "확인",
+        "logoutModalDesc": "로그아웃 하시겠습니까?",
+         "loadingText": "로딩 중..."
+    },
+    "ImageModuleText": {
+        "placeholderText": "이미지를 설명해 주세요",
+        "generateButtonText": "이미지 생성",
+        "downloadButtonText": "이미지 다운로드",
+        "inputDescriptionText": "이미지를 설명하세요",
+        "imageRatioText": "이미지 비율",
+        "imageNumberText": "이미지 개수"
+    },
+    "PaymentModuleText": {
+        "paymentButtonText": "프로 버전으로 업그레이드"
+    }
+  }
+  

@@ -1,7 +1,7 @@
 import createMiddleware from 'next-intl/middleware';
 import { NextRequest, NextResponse } from 'next/server';
 
-export const locales = ['en', 'zh'];
+export const locales = ['en', 'zh', 'ja', 'ko', 'tw'];
 
 const intlMiddleware = createMiddleware({
   locales,
@@ -14,5 +14,5 @@ export default function middleware(req: NextRequest) {
 }
 
 export const config = {
-  matcher: ['/', '/(zh|en)/:path*', '/((?!_next|_vercel|.*\\..*).*)']
+  matcher: ['/', '/(zh|en|ja|ko|tw)/:path*', '/((?!_next|_vercel|.*\\..*).*)']
 };

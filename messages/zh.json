@@ -12,9 +12,7 @@
         "loginModalButtonText": "使用谷歌登录",
         "cancelButtonText": "取消",
         "toastConfirmText": "确认",
-        "logoutModalDesc": "您确定要登出吗？"
-    },
-    "CommonText": {
+        "logoutModalDesc": "您确定要登出吗？",
         "loadingText": "正在加载..."
     },
     "ImageModuleText": {

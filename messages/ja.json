@@ -1,0 +1,30 @@
+{
+    "Metadata": {
+      "title": "AI生成画像",
+      "description": "人工知能を使った画像生成器"
+    },
+    "IndexPageText": {
+      "description": "AI生成画像"
+    },
+    "AuthText" : {
+        "loginText": "ログイン",
+        "loginModalDesc": "ログインしてください",
+        "loginModalButtonText": "Googleでログイン",
+        "cancelButtonText": "キャンセル",
+        "toastConfirmText": "確認",
+        "logoutModalDesc": "ログアウトしますか？",
+         "loadingText": "読み込み中..."
+    },
+    "ImageModuleText": {
+        "placeholderText": "画像の説明を入力してください",
+        "generateButtonText": "画像生成",
+        "downloadButtonText": "画像をダウンロード",
+        "inputDescriptionText": "画像を説明してください",
+        "imageRatioText": "画像の比率",
+        "imageNumberText": "画像の枚数"
+    },
+    "PaymentModuleText": {
+        "paymentButtonText": "プロ版にアップグレード"
+    }
+  }
+  

@@ -5,11 +5,11 @@ import { useLocale, useTranslations } from 'next-intl';
 const languages = [
   { code: 'en', name: 'English', flag: '/flags/en.png' },
   { code: 'zh', name: '简体中文', flag: '/flags/zh.png' },
-  { code: 'zh-TW', name: '繁體中文', flag: '/flags/zh-TW.png' },
+  { code: 'tw', name: '繁體中文', flag: '/flags/zh-TW.png' },
   { code: 'ko', name: '한국어', flag: '/flags/ko.png' },
   { code: 'ja', name: '日本語', flag: '/flags/ja.png' },
-  { code: 'pt', name: 'Português', flag: '/flags/pt.png' },
-  { code: 'es', name: 'Español', flag: '/flags/es.png' },
+  // { code: 'pt', name: 'Português', flag: '/flags/pt.png' },
+  // { code: 'es', name: 'Español', flag: '/flags/es.png' },
 ];
 
 const LanguageSwitcher: React.FC = () => {
