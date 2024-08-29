@@ -35,12 +35,27 @@ const LanguageSwitcher: React.FC = () => {
     setIsOpen(!isOpen);
   };
 
+  const dropdownRef = React.useRef<HTMLDivElement>(null);
+
+  React.useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      if (dropdownRef.current && !dropdownRef.current.contains(event.target as Node)) {
+        setIsOpen(false);
+      }
+    };
+
+    document.addEventListener('mousedown', handleClickOutside);
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside);
+    };
+  }, []);
+
   return (
-    <div className="relative inline-block text-left w-24">
+    <div className="relative inline-block text-left w-24" ref={dropdownRef}>
       <div>
         <button
           type="button"
-          className="inline-flex justify-between items-center w-full rounded-md border border-gray-700 shadow-sm px-3 py-2 bg-gray-800 text-sm font-medium text-white hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white"
+          className="inline-flex justify-between items-center w-full rounded-md border border-gray-500 px-3 py-2 text-sm font-semibold text-white hover:border-white hover:bg-white hover:text-black transition-colors duration-300"
           id="language-menu"
           aria-haspopup="true"
           aria-expanded={isOpen}
@@ -53,13 +68,13 @@ const LanguageSwitcher: React.FC = () => {
         </button>
       </div>
       {isOpen && (
-        <div className="origin-top-right absolute right-0 mt-2 w-24 rounded-md shadow-lg bg-gray-800 ring-1 ring-black ring-opacity-5 divide-y divide-gray-700" role="menu" aria-orientation="vertical" aria-labelledby="language-menu">
+        <div className="origin-top-right absolute right-0 mt-2 w-24 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 divide-y divide-gray-100" role="menu" aria-orientation="vertical" aria-labelledby="language-menu">
           <div className="py-1" role="none">
             {languages.map((language) => (
               <button
                 key={language.code}
                 onClick={() => switchLanguage(language.code)}
-                className="flex items-center px-3 py-2 text-sm text-gray-300 hover:bg-gray-700 hover:text-white w-full text-left"
+                className="flex items-center px-3 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-gray-900 w-full text-left"
                 role="menuitem"
               >
                 {language.name}

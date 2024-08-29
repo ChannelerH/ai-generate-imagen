@@ -23,7 +23,7 @@ const MainLayout = async ({ children, params: { locale } }: { children: ReactNod
       <NextAuthProvider>
         <CommonProvider>
           <div>
-            <ClientSidebar />
+            {/* <ClientSidebar /> */}
             <Toaster
               position='top-center'
               toastOptions={{

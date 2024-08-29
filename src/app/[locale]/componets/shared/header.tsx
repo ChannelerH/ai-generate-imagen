@@ -32,7 +32,9 @@ function Header ({
         <LoginModal/>
         <LogoutModal/>
         <div className="flex items-center justify-end space-x-2 w-48">
+          <div className="w-24">
           <LanguageSwitcher />
+          </div>
           <div className="w-24">
             <LoginButton buttonType={userData ? 1 : 0} />
           </div>

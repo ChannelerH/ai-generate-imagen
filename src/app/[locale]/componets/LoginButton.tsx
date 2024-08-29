@@ -55,7 +55,7 @@ const LoginButton = ({
           <>
             {
               loading ? (
-                  <button className="inline-flex w-full justify-center gap-x-1.5 border border-[rgba(255,255,255,0.5)] rounded-md px-3 py-2 text-sm font-semibold hover:border-[rgba(255,255,255,0.9)]"
+                  <button className="inline-flex w-full justify-center items-center gap-x-1.5 border border-gray-500 rounded-md px-3 py-2 text-sm font-semibold text-white hover:border-white hover:bg-white hover:text-black transition-colors duration-300"
                           disabled
                   >
                     <p>{t('loginText')}</p>
@@ -64,12 +64,10 @@ const LoginButton = ({
                 ) :
                 (
                   <button
-                    className="inline-flex w-full justify-center gap-x-1.5 rounded-md px-3 py-2 text-sm font-semibold hover:border-[rgba(255,255,255,0.9)]"
+                    className="inline-flex w-full justify-center items-center gap-x-1.5 border border-gray-500 rounded-md px-3 py-2 text-sm font-semibold text-white hover:border-white hover:bg-white hover:text-black transition-colors duration-300"
                     onClick={login}
                   >
-                  <span className="inline-block border border-gray-500 rounded-md px-2 py-1 text-white hover:border-white hover:bg-white hover:text-black transition-colors duration-300">
                     {t('loginText')}
-                  </span>
                   </button>
                 )
             }

@@ -32,7 +32,7 @@ export default function RootLayout({
   return (
     <html lang={locale}>
       <body className={cn("bg-background text-gray-400/70", font.className)}>
-        <main className="xl:pl-[15vw] pt-5 mx-2 xl:mx-6 xl:pt-8">{children}</main>
+        <main className="pt-5 mx-2 xl:mx-6 xl:pt-8">{children}</main>
       </body>
     </html>
   );
