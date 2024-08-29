@@ -25,8 +25,6 @@ const LanguageSwitcher: React.FC = () => {
     currentLocale = 'en'; // Fallback to English
   }
 
-  const t = useTranslations('LanguageSwitcher');
-
   const switchLanguage = (newLocale: string) => {
     const currentPath = pathname.replace(`/${currentLocale}`, '');
     router.push(`/${newLocale}${currentPath}`);
