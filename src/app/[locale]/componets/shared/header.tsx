@@ -23,9 +23,18 @@ function Header ({
 
   return (
     <div className="flex flex-col xl:flex-row items-center justify-between lg:pb-6 pt-4 px-4">
-      <h1 className="text-3xl text-white hover:text-gray-400 hover:transition-colors mb-4 xl:mb-0">
-        {t('description')}
-      </h1>
+      <div className="flex items-center mb-4 xl:mb-0">
+        <Image
+          src="/website.png"
+          alt="Website Logo"
+          width={40}  // Adjust this value as needed
+          height={40} // Adjust this value as needed
+          className="mr-3"  // Add margin to the right of the image
+        />
+        <h1 className="text-3xl text-white hover:text-gray-400 hover:transition-colors">
+          {t('description')}
+        </h1>
+      </div>
       <div className="flex items-center justify-center xl:justify-end gap-2 w-full xl:w-auto">
         <LoadingModal/>
         <GeneratingModal/>
