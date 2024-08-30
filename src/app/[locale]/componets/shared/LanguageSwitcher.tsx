@@ -1,6 +1,8 @@
 import React from 'react';
 import { useRouter, usePathname } from 'next/navigation';
 import { useLocale, useTranslations } from 'next-intl';
+import { useCommonContext } from '@/app/context/common-context';
+import { useEffect } from 'react';
 
 const languages = [
   { code: 'en', name: 'English', flag: '/flags/en.png' },
@@ -17,6 +19,7 @@ const LanguageSwitcher: React.FC = () => {
   const pathname = usePathname();
   let currentLocale;
   const [isOpen, setIsOpen] = React.useState(false);
+  const { setShowLoadingModal } = useCommonContext();
   
   try {
     currentLocale = useLocale();
@@ -26,10 +29,21 @@ const LanguageSwitcher: React.FC = () => {
   }
 
   const switchLanguage = (newLocale: string) => {
+    if (newLocale === currentLocale) {
+      // If the new locale is the same as the current one, just close the dropdown
+      setIsOpen(false);
+      return;
+    }
+    setShowLoadingModal(true);
     const currentPath = pathname.replace(`/${currentLocale}`, '');
     router.push(`/${newLocale}${currentPath}`);
     setIsOpen(false);
   };
+
+  useEffect(() => {
+    // Reset loading state after language change
+    setShowLoadingModal(false);
+  }, [currentLocale, setShowLoadingModal]);
 
   const toggleDropdown = () => {
     setIsOpen(!isOpen);

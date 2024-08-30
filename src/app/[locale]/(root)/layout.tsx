@@ -5,6 +5,7 @@ import { CommonProvider } from '@/app/context/common-context';
 import { Toaster } from '@/app/[locale]/componets/shared/ui/sonner';
 import Header from '@/app/[locale]/componets/shared/header';
 import ClientSidebar from "@/app/[locale]/componets/shared/ClientSidebar";
+import LoadingModal from '@/app/[locale]/componets/LoadingModal';
 
 async function getMessages(locale: string) {
   try {
@@ -41,6 +42,7 @@ const MainLayout = async ({ children, params: { locale } }: { children: ReactNod
                 {children}
               </main>
             </div>
+            <LoadingModal />
           </div>
         </CommonProvider>
       </NextAuthProvider>
