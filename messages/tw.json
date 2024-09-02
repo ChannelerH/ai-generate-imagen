@@ -1,9 +1,10 @@
 {
     "Metadata": {
-        "title": "人工智能生成圖片",
-        "description": "使用人工智能的圖片生成器"
+        "title": "Magic Flux-人工智能生成圖片",
+        "description": "Magic Flux-使用人工智能的圖片生成器"
     },
     "IndexPageText": {
+        "brandName": "Magic Flux",
         "description": "AI生成圖片"
     },
     "AuthText": {
@@ -25,5 +26,8 @@
     },
     "PaymentModuleText": {
         "paymentButtonText": "升級到專業版"
+    },
+    "FooterText": {
+      "privacyPolicy": "隱私政策"
     }
 }

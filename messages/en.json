@@ -1,9 +1,10 @@
 {
     "Metadata": {
-      "title": "AI Generate Imagen",
+      "title": "Magic Flux-AI Generate Imagen",
       "description": "Image generator with artificial intelligence"
     },
     "IndexPageText": {
+      "brandName": "Magic Flux",
       "description": "AI Generate Imagen"
     },
     "AuthText" : {
@@ -25,5 +26,8 @@
     },
     "PaymentModuleText": {
         "paymentButtonText": "Upgrade to Pro"
+    },
+    "FooterText": {
+      "privacyPolicy": "Privacy Policy"
     }
 }

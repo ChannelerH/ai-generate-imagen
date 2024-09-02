@@ -4,8 +4,8 @@ import { NextAuthProvider } from '@/app/context/next-auth-context';
 import { CommonProvider } from '@/app/context/common-context';
 import { Toaster } from '@/app/[locale]/componets/shared/ui/sonner';
 import Header from '@/app/[locale]/componets/shared/header';
-import ClientSidebar from "@/app/[locale]/componets/shared/ClientSidebar";
 import LoadingModal from '@/app/[locale]/componets/LoadingModal';
+import Footer from '@/app/[locale]/componets/shared/footer';
 
 async function getMessages(locale: string) {
   try {
@@ -41,6 +41,7 @@ const MainLayout = async ({ children, params: { locale } }: { children: ReactNod
               <main className="flex-grow container mx-auto px-4 xl:px-6 pt-5 xl:pt-8">
                 {children}
               </main>
+              <Footer/> 
             </div>
             <LoadingModal />
           </div>

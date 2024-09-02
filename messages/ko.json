@@ -1,9 +1,10 @@
 {
     "Metadata": {
-      "title": "AI 이미지 생성",
-      "description": "인공지능을 사용한 이미지 생성기"
+      "title": "Magic Flux-AI 이미지 생성",
+      "description": "Magic Flux-인공지능을 사용한 이미지 생성기"
     },
     "IndexPageText": {
+      "brandName": "Magic Flux",
       "description": "AI 이미지 생성"
     },
     "AuthText" : {
@@ -25,6 +26,9 @@
     },
     "PaymentModuleText": {
         "paymentButtonText": "프로 버전으로 업그레이드"
+    },
+    "FooterText": {
+      "privacyPolicy": "개인 정보 보호 정책"
     }
   }
   

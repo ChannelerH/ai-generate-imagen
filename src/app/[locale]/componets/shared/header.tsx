@@ -31,9 +31,12 @@ function Header ({
           height={40} // Adjust this value as needed
           className="mr-3"  // Add margin to the right of the image
         />
-        <h1 className="text-3xl text-white hover:text-gray-400 hover:transition-colors">
-          {t('description')}
-        </h1>
+          <h1 className="text-3xl text-white hover:text-gray-400 hover:transition-colors">
+           {t('brandName')}
+          </h1>
+          <h3 className="text-gray-300 hover:text-gray-400 hover:transition-colors ml-4 mt-2">
+            {t('description')}
+          </h3>
       </div>
       <div className="flex items-center justify-center xl:justify-end gap-2 w-full xl:w-auto">
         <LoadingModal/>
