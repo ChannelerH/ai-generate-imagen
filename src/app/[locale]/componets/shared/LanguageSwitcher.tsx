@@ -36,6 +36,7 @@ const LanguageSwitcher: React.FC = () => {
     }
     setShowLoadingModal(true);
     const currentPath = pathname.replace(`/${currentLocale}`, '');
+    localStorage.setItem('preferredLocale', newLocale);
     router.push(`/${newLocale}${currentPath}`);
     setIsOpen(false);
   };

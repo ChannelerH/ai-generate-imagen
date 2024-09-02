@@ -53,12 +53,13 @@ const LoginModal = ({redirectPath='',}) => {
                     <Dialog.Title as="h3"
                                   className="text-2xl font-semibold flex justify-center items-center text-gray-200">
                     
-                      <a className="bg-cover bg-center px-20 py-5  cursor-pointer" href="/"
-                      style={{
-                        backgroundImage: "url('/website.png')",
-                        filter: "brightness(0) invert(1)",
-                      }}>
-                      </a>
+                    <Image
+                      src="/website.png"
+                      alt="Website Logo"
+                      width={40}  // Adjust this value as needed
+                      height={40} // Adjust this value as needed
+                      className="mr-3"  // Add margin to the right of the image
+                    />
                     </Dialog.Title>
                     <div className="mt-2">
                       <p className="text-sm text-gray-400">
