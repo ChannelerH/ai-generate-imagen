@@ -5,16 +5,18 @@ import { Fragment, useRef, useState } from 'react'
 import { Dialog, Transition } from '@headlessui/react'
 import {useCommonContext} from "@/app/context/common-context";
 import {signOut} from "next-auth/react";
+import { usePathname } from 'next/navigation';
 
-export default function LogoutModal({ redirectPath = '' }) {
+export default function LogoutModal() {
   const t = useTranslations('AuthText');
+  const pathname = usePathname();
 
   const cancelButtonRef = useRef(null);
   const {showLogoutModal, setShowLogoutModal} = useCommonContext();
 
   const confirmButton = () => {
     sessionStorage.removeItem("user_id");
-    signOut({callbackUrl: redirectPath}).then(r => console.log(r))
+    signOut({callbackUrl: pathname}).then(r => console.log(r))
   }
 
   return (

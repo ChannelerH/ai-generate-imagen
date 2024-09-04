@@ -30,7 +30,6 @@ const LanguageSwitcher: React.FC = () => {
 
   const switchLanguage = (newLocale: string) => {
     if (newLocale === currentLocale) {
-      // If the new locale is the same as the current one, just close the dropdown
       setIsOpen(false);
       return;
     }
@@ -42,8 +41,11 @@ const LanguageSwitcher: React.FC = () => {
   };
 
   useEffect(() => {
-    // Reset loading state after language change
-    setShowLoadingModal(false);
+    const timer = setTimeout(() => {
+      setShowLoadingModal(false);
+    }, 1000);
+
+    return () => clearTimeout(timer);
   }, [currentLocale, setShowLoadingModal]);
 
   const toggleDropdown = () => {

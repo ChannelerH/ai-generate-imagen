@@ -4,7 +4,6 @@ import { useRouter } from 'next/navigation'
 import { whiteLoadingSvg, blackLoadingSvg } from './shared/svg';
 import { useCommonContext } from '@/app/context/common-context';
 import { useSession } from "next-auth/react";
-import Image from "next/image";
 import { useTranslations } from 'next-intl';
 
 const LoginButton = ({

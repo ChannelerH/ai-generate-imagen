@@ -28,6 +28,51 @@
         "paymentButtonText": "升級到專業版"
     },
     "FooterText": {
-      "privacyPolicy": "隱私政策"
+      "privacyPolicy": "隱私政策",
+      "legal": "法律條款"
+    },
+    "PrivacyPolicy": {
+  "title": "Magic Flux隱私政策",
+  "effectiveDate": "生效日期：{date}",
+  "overview": {
+    "title": "概述",
+    "content": "Magic Flux運營網站https://magicflux.ai/，並致力於保護您的隱私。本隱私政策概述了我們收集的信息類型、如何使用這些信息，以及我們採取的措施確保您的個人信息得到適當的處理。"
+  },
+  "informationCollection": {
+    "title": "信息收集",
+    "personalData": {
+      "title": "個人資料",
+      "content": "我們收集您自願提供給我們的個人資料，包括但不限於：",
+      "name": "姓名",
+      "email": "電子郵件地址",
+      "paymentInfo": "支付信息",
+      "purpose": "此資訊是為了在我們的Magic Flux目錄上處理訂單而收集的。"
+    },
+    "nonPersonalData": {
+      "title": "非個人資料",
+      "content": "我們還通過網頁cookie收集非個人資料，包括使用細節，如您的IP地址、瀏覽器類型以及訪問我們網站的頁面。這些資料用於增強您在我們網站的體驗。"
     }
+  },
+  "purposeOfDataCollection": {
+    "title": "資料收集目的",
+    "content": "收集您的資料的主要目的是處理您的訂單，並改善我們網站的 功能和服務。"
+  },
+  "dataSharing": {
+    "title": "資料共享",
+    "content": "Magic Flux尊重您的隱私。我們不會與任何第三方共享您的個人資料，除非有必要處理您的訂單或遵守法律要求。"
+  },
+  "childrensPrivacy": {
+    "title": "兒童隱私",
+    "content": "我們的服務不適用於18歲以下的兒童。我們不會有意收集儿童的個人信息。"
+  },
+  "updates": {
+    "title": "隱私政策更新",
+    "content": "我們可能會不定時更新我們的隱私政策。我們將在本頁面上發布新的隱私政策，並更新頂部的「生效日期」，同時通過電子郵件通知您重大變化。"
+  },
+  "contactUs": {
+    "title": "聯繫我們",
+    "content": "如果您對本隱私政策有任何疑問或顧慮，請聯繫我們：channelerH@gmail.com。"
+  }
+}
+
 }

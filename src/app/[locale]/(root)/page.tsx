@@ -16,7 +16,7 @@ export default function Home() {
   };
 
   return (
-    <div className="flex flex-col xl:flex-row gap-4">
+    <div className="flex flex-col xl:flex-row gap-6 mt-20 px-4">
       <div className="xl:w-1/3">
       <SidebarRight onNewImage={handleNewImage} setLoading={setLoading} /> {/* 将更新函数传递给 SidebarRight */}
       </div>

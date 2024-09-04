@@ -13,7 +13,7 @@ export default function LoadingModal({
 
   return (
     <Transition.Root show={showLoadingModal} as={Fragment}>
-      <Dialog as="div" className="relative z-30" initialFocus={cancelButtonRef} onClose={setShowLoadingModal}>
+      <Dialog as="div" className="relative z-50" initialFocus={cancelButtonRef} onClose={setShowLoadingModal}>
         <Transition.Child
           as={Fragment}
           enter="ease-out duration-300"

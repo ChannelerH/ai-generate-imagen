@@ -28,6 +28,51 @@
         "paymentButtonText": "升级到专业版"
     },
     "FooterText": {
-      "privacyPolicy": "隐私政策"
+      "privacyPolicy": "隐私政策",
+      "legal": "法律条款"
+    },
+
+"PrivacyPolicy": {
+    "title": "Magic Flux隐私政策",
+    "effectiveDate": "生效日期：{date}",
+    "overview": {
+      "title": "概述",
+      "content": "Magic Flux运营网站https://magicflux.ai/，并致力于保护您的隐私。本隐私政策概述了我们收集的信息类型、如何使用这些信息，以及我们采取的措施确保您的个人信息得到适当的处理。"
+    },
+    "informationCollection": {
+      "title": "信息收集",
+      "personalData": {
+        "title": "个人数据",
+        "content": "我们收集您自愿提供给我们的个人数据，包括但不限于：",
+        "name": "姓名",
+        "email": "电子邮件地址",
+        "paymentInfo": "支付信息",
+        "purpose": "此信息是为了在我们的Magic Flux目录上处理订单而收集的。"
+      },
+      "nonPersonalData": {
+        "title": "非个人数据",
+        "content": "我们还通过网页 cookie 收集非个人数据，包括使用详情，如您的IP地址、浏览器类型以及访问我们网站的页面。这些数据用于增强您在我们网站的体验。"
+      }
+    },
+    "purposeOfDataCollection": {
+      "title": "数据收集目的",
+      "content": "收集您的数据的主要目的是处理您的订单，并改善我们网站的功能和服务。"
+    },
+    "dataSharing": {
+      "title": "数据共享",
+      "content": "Magic Flux尊重您的隐私。我们不会与任何第三方共享您的个人数据，除非有必要处理您的订单或遵守法律要求。"
+    },
+    "childrensPrivacy": {
+      "title": "儿童隐私",
+      "content": "我们的服务不适用于18岁以下的儿童。我们不会有意收集儿童的个人信息。"
+    },
+    "updates": {
+      "title": "隐私政策更新",
+      "content": "我们可能会不时更新我们的隐私政策。我们将在本页面上发布新的隐私政策，并更新顶部的“生效日期”，同时通过电子邮件通知您重大变化。"
+    },
+    "contactUs": {
+      "title": "联系我们",
+      "content": "如果您对本隐私政策有任何疑问或顾虑，请联系我们：channelerH@gmail.com。"
     }
+  }  
 }

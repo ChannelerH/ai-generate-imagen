@@ -22,7 +22,7 @@ function Header ({
   const t = useTranslations('IndexPageText');
 
   return (
-    <div className="flex flex-col xl:flex-row items-center justify-between lg:pb-6 pt-4 px-4">
+    <div className="fixed top-0 left-0 right-0 z-50 flex flex-col xl:flex-row items-center justify-between lg:pb-6 pt-4 px-6 bg-background">
       <div className="flex items-center mb-4 xl:mb-0">
         <Image
           src="/website.png"

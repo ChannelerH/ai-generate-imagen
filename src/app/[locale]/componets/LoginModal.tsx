@@ -9,6 +9,7 @@ import {signInUseAuth} from "@/app/[locale]/utils/nextAuthClient";
 import {useSession} from "next-auth/react";
 import { useTranslations } from 'next-intl';
 import Image from "next/image";
+import { usePathname } from 'next/navigation';
 
 const style = {
   loginGoogleBtn: 'inline-flex w-full justify-center items-center space-x-3 rounded-md  px-3 py-2 text-sm font-semibold shadow-sm hover:bg-indigo-500 bg-indigo-600  focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600'
@@ -19,6 +20,8 @@ const LoginModal = ({redirectPath='',}) => {
   const {data: session, status} = useSession();
   const [loadGoogle, setLoadGoogle] = useState(false)
   const {showLoginModal, setShowLoginModal} = useCommonContext();
+  const pathname = usePathname();
+
   return (
     <Transition.Root show={showLoginModal} as={Fragment}>
       <Dialog as="div" className="relative z-50" onClose={setShowLoginModal}>
@@ -87,7 +90,7 @@ const LoginModal = ({redirectPath='',}) => {
                         className="inline-flex w-full justify-center items-center space-x-3 rounded-md px-3 py-2 text-sm font-medium text-gray-200 bg-gray-700 hover:bg-gray-600 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gray-600 transition-colors duration-200"
                         onClick={async () => {
                           await signInUseAuth({
-                            redirectPath: redirectPath
+                            redirectPath: pathname
                           })
                           setLoadGoogle(true)
                         }}
