@@ -29,7 +29,8 @@
     },
     "FooterText": {
       "privacyPolicy": "隐私政策",
-      "legal": "法律条款"
+      "legal": "法律条款",
+      "termsAndconditions": "服务条款"
     },
 
 "PrivacyPolicy": {
@@ -74,5 +75,53 @@
       "title": "联系我们",
       "content": "如果您对本隐私政策有任何疑问或顾虑，请联系我们：channelerH@gmail.com。"
     }
-  }  
+  },
+    "TermsOfService": {
+      "title": "Magic Flux 服务条款",
+      "effectiveDate": "生效日期: {date}",
+      "introduction": {
+        "title": "简介",
+        "content": "欢迎使用 Magic Flux。通过访问我们的网站 (https://magicflux.ai)，您同意受这些服务条款、所有适用法律和法规的约束，并同意您有责任遵守任何适用的本地法律。如果您不同意这些条款中的任何一条，您将被禁止使用或访问本网站。"
+      },
+      "useLicense": {
+        "title": "使用许可",
+        "content": "特此授予您在 Magic Flux 网站上临时下载材料（信息或软件）的一份副本的权限，仅用于个人、非商业性的临时浏览。这是许可的授予，而非所有权的转移，根据此许可，您不得：",
+        "restrictions": {
+          "modify": "修改或复制材料；",
+          "useCommercially": "将材料用于任何商业用途，或用于任何公开展示（无论是商业性还是非商业性）；",
+          "decompile": "尝试反编译或逆向工程 Magic Flux 网站上包含的任何软件；",
+          "remove": "从材料中删除任何版权或其他所有权标志；或",
+          "transfer": "将材料转让给他人或在任何其他服务器上“镜像”材料。"
+        },
+        "termination": "如果您违反这些限制，此许可将自动终止，并且 Magic Flux 可以随时终止该许可。在终止您对这些材料的浏览或终止该许可时，您必须销毁您所拥有的所有已下载的材料，无论是电子版本还是打印版本。"
+      },
+      "disclaimer": {
+        "title": "免责声明",
+        "content": "Magic Flux 网站上的材料按“现状”提供。Magic Flux 不做任何明示或暗示的保证，并在此否认并否定所有其他保证，包括但不限于对适销性、特定用途适用性或非侵权知识产权或其他权利的暗示保证。"
+      },
+      "limitations": {
+        "title": "责任限制",
+        "content": "在任何情况下，Magic Flux 或其供应商均不对因使用或无法使用 Magic Flux 网站上的材料而引起的任何损害（包括但不限于数据损失或利润损失，或因业务中断而造成的损害）承担责任，即使 Magic Flux 或 Magic Flux 授权代表已口头或书面通知了此类损害的可能性。"
+      },
+      "accuracyOfMaterials": {
+        "title": "材料的准确性",
+        "content": "Magic Flux 网站上的材料可能包含技术、印刷或摄影错误。Magic Flux 不保证其网站上的任何材料是准确的、完整的或最新的。Magic Flux 可以随时在没有通知的情况下更改其网站上包含的材料。然而，Magic Flux 并不承诺更新这些材料。"
+      },
+      "links": {
+        "title": "链接",
+        "content": "Magic Flux 尚未审核其网站上链接的所有网站，并且对任何此类链接网站的内容不承担责任。链接的包含并不意味着 Magic Flux 认可该网站。使用任何此类链接网站的风险由用户自行承担。"
+      },
+      "modifications": {
+        "title": "修改",
+        "content": "Magic Flux 可以随时在没有通知的情况下修订其网站的这些服务条款。通过使用本网站，您同意受当前版本的服务条款的约束。"
+      },
+      "governingLaw": {
+        "title": "适用法律",
+        "content": "这些条款和条件受美国法律管辖并依其解释，您不可撤销地提交该州或该地区法院的专属管辖。"
+      },
+      "contactUs": {
+        "title": "联系我们",
+        "content": "如果您对这些条款有任何疑问，请通过 channelerH@gmail.com 与我们联系。"
+      }
+    }
 }

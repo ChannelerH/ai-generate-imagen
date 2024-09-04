@@ -29,7 +29,8 @@
     },
     "FooterText": {
       "privacyPolicy": "隱私政策",
-      "legal": "法律條款"
+      "legal": "法律條款",
+      "termsAndconditions": "條款與條件"
     },
     "PrivacyPolicy": {
   "title": "Magic Flux隱私政策",
@@ -73,6 +74,53 @@
     "title": "聯繫我們",
     "content": "如果您對本隱私政策有任何疑問或顧慮，請聯繫我們：channelerH@gmail.com。"
   }
-}
-
+},
+    "TermsOfService": {
+      "title": "Magic Flux 服務條款",
+      "effectiveDate": "生效日期: {date}",
+      "introduction": {
+        "title": "簡介",
+        "content": "歡迎使用 Magic Flux。通過訪問我們的網站 (https://magicflux.ai)，您同意受這些服務條款、所有適用法律和法規的約束，並同意您有責任遵守任何適用的本地法律。如果您不同意這些條款中的任何一條，您將被禁止使用或訪問本網站。"
+      },
+      "useLicense": {
+        "title": "使用許可",
+        "content": "特此授予您在 Magic Flux 網站上臨時下載材料（信息或軟件）的一份副本的權限，僅用於個人、非商業性的臨時瀏覽。這是許可的授予，而非所有權的轉移，根據此許可，您不得：",
+        "restrictions": {
+          "modify": "修改或複製材料；",
+          "useCommercially": "將材料用於任何商業用途，或用於任何公開展示（無論是商業性還是非商業性）；",
+          "decompile": "嘗試反編譯或逆向工程 Magic Flux 網站上包含的任何軟件；",
+          "remove": "從材料中刪除任何版權或其他所有權標誌；或",
+          "transfer": "將材料轉讓給他人或在任何其他伺服器上“鏡像”材料。"
+        },
+        "termination": "如果您違反這些限制，此許可將自動終止，並且 Magic Flux 可以隨時終止該許可。在終止您對這些材料的瀏覽或終止該許可時，您必須銷毀您所擁有的所有已下載的材料，無論是電子版本還是列印版本。"
+      },
+      "disclaimer": {
+        "title": "免責聲明",
+        "content": "Magic Flux 網站上的材料按“現狀”提供。Magic Flux 不做任何明示或暗示的保證，並在此否認並否定所有其他保證，包括但不限於對適銷性、特定用途適用性或非侵權知識產權或其他權利的暗示保證。"
+      },
+      "limitations": {
+        "title": "責任限制",
+        "content": "在任何情況下，Magic Flux 或其供應商均不對因使用或無法使用 Magic Flux 網站上的材料而引起的任何損害（包括但不限於數據損失或利潤損失，或因業務中斷而造成的損害）承擔責任，即使 Magic Flux 或 Magic Flux 授權代表已口頭或書面通知了此類損害的可能性。"
+      },
+      "accuracyOfMaterials": {
+        "title": "材料的準確性",
+        "content": "Magic Flux 網站上的材料可能包含技術、印刷或攝影錯誤。Magic Flux 不保證其網站上的任何材料是準確的、完整的或最新的。Magic Flux 可以隨時在沒有通知的情況下更改其網站上包含的材料。然而，Magic Flux 並不承諾更新這些材料。"
+      },
+      "links": {
+        "title": "連結",
+        "content": "Magic Flux 尚未審核其網站上連結的所有網站，並且對任何此類連結網站的內容不承擔責任。連結的包含並不意味著 Magic Flux 認可該網站。使用任何此類連結網站的風險由用戶自行承擔。"
+      },
+      "modifications": {
+        "title": "修改",
+        "content": "Magic Flux 可以隨時在沒有通知的情況下修訂其網站的這些服務條款。通過使用本網站，您同意受當前版本的服務條款的約束。"
+      },
+      "governingLaw": {
+        "title": "適用法律",
+        "content": "這些條款和條件受美國法律管轄並依其解釋，您不可撤銷地提交該州或該地區法院的專屬管轄。"
+      },
+      "contactUs": {
+        "title": "聯繫我們",
+        "content": "如果您對這些條款有任何疑問，請通過 channelerH@gmail.com 與我們聯繫。"
+      }
+    }
 }
