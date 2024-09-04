@@ -5,6 +5,7 @@ import { useCommonContext } from '@/app/context/common-context';
 import { usePathname } from 'next/navigation';
 import Header from '@/app/[locale]/componets/shared/header';
 import LoadingModal from '@/app/[locale]/componets/LoadingModal';
+import LogoutModal from '@/app/[locale]/componets/LogoutModal';
 
 const ClientLayout = ({ children }: { children: ReactNode }) => {
   const { setShowLoadingModal } = useCommonContext();
@@ -23,6 +24,7 @@ const ClientLayout = ({ children }: { children: ReactNode }) => {
         </main>
       </div>
       <LoadingModal />
+      <LogoutModal />
     </div>
   );
 };
