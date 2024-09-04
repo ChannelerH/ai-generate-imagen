@@ -25,7 +25,7 @@ export const SidebarRight = () => {
     console.log('Message:', message); // 打印输入的文本
 
     if (!session) {
-       // 用户未登录
+       // 用户未登录，发起登录动作
     }
 
     const apiKey = process.env.NEXT_PUBLIC_ZHIPU_API_KEY; // 从环境变量中获取 API 密钥
