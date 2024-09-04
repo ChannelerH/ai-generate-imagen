@@ -9,6 +9,12 @@ const nextConfig = {
             {
                 hostname: "img.freepik.com",
             },
+            {
+                protocol: 'https',
+                hostname: 'sfile.chatglm.cn',
+                port: '',
+                pathname: '/**', // 允许所有路径
+              },
         ],
     }
 }

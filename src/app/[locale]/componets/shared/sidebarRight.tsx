@@ -9,7 +9,12 @@ import { useState } from 'react'; // 导入 useState 钩子
 import axios from 'axios'; // 导入 axios 库
 import { useSession } from "next-auth/react"; 
 
-export const SidebarRight = () => {
+interface SidebarRightProps {
+  onNewImage: (url: string) => void; // 接收更新图片 URL 的函数
+  setLoading: (loading: boolean) => void; // 接收设置加载状态的函数
+}
+
+export const SidebarRight: React.FC<SidebarRightProps> = ({ onNewImage, setLoading }) => {
   const t = useTranslations('ImageModuleText');
 
   const [message, setMessage] = useState(''); // 定义状态来存储 prompt
@@ -25,8 +30,10 @@ export const SidebarRight = () => {
     console.log('Message:', message); // 打印输入的文本
 
     if (!session) {
-       // 用户未登录，发起登录动作
+        // 用户未登录，发起登录动作
     }
+
+   setLoading(true); // 开始加载
 
     const apiKey = process.env.NEXT_PUBLIC_ZHIPU_API_KEY; // 从环境变量中获取 API 密钥
     const requestData = {
@@ -47,14 +54,15 @@ export const SidebarRight = () => {
             'Content-Type': 'application/json',
           },
         });
-      console.log('Response:', response.data); // 打印响应数据
-    
-      if (response.data && response.data.length > 0) {
-        const firstItem = response.data[0];
-        console.log('First Item URL:', firstItem.url);
-      }
+      console.log('Response.data:', JSON.stringify(response.data)); // 打印响应数据
+      const firstItem = response.data.data[0];
+      console.log('First Item URL:', firstItem.url);
+
+      onNewImage(firstItem.url); // 调用 onNewImage 函数，将生成的图片 URL 传递给父组件
     } catch (error) {
       console.error('Error:', error); // 打印错误信息
+    } finally {
+      setLoading(false); // 结束加载
     }
   };
 
