@@ -63,17 +63,17 @@ export const SidebarRight: React.FC<SidebarRightProps> = ({ onNewImage, setLoadi
       const firstItem = response.data.data[0];
       console.log('First Item URL:', firstItem.url);
       
-      const saveImageResponse = await fetch('/api/saveGeneratedImage', {
-        method: 'POST',
-        body: JSON.stringify({
-          email: userData.email,
-          imageUrl: firstItem.url,
-        }),
-      });
+      // const saveImageResponse = await fetch('/api/saveGeneratedImage', {
+      //   method: 'POST',
+      //   body: JSON.stringify({
+      //     email: userData.email,
+      //     imageUrl: firstItem.url,
+      //   }),
+      // });
 
-      if (!saveImageResponse.ok) {
-        console.error('Failed to save image to database');
-      }
+      // if (!saveImageResponse.ok) {
+      //   console.error('Failed to save image to database');
+      // }
   
       onNewImage(firstItem.url);
     } catch (error) {
