@@ -1,6 +1,6 @@
 'use client'
 
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { useTranslations } from 'next-intl';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
@@ -8,7 +8,12 @@ import { usePathname } from 'next/navigation';
 const Footer = () => {
   const t = useTranslations('FooterText');
   const pathname = usePathname();
-  const locale = pathname.split('/')[1] || 'en';
+  const [locale, setLocale] = useState('en');
+
+  useEffect(() => {
+    const storedLocale = localStorage.getItem('preferredLocale');
+    setLocale(storedLocale || 'en');
+  });
 
   return (
     <footer className="text-gray-400 py-8 mt-5">
@@ -21,9 +26,7 @@ const Footer = () => {
           <div>
             <h3 className="text-lg text-white">Legal</h3>
             <ul className="mt-2 space-y-2">
-              <li><Link href={`/${locale}/privacy-policy`} 
-              // className="hover:underline"
-              >{t('privacyPolicy')}</Link></li>
+              <li><Link href={`/${locale}/privacy-policy`}>{t('privacyPolicy')}</Link></li>
               <li><Link href={`/${locale}/terms-conditions`}>{t('termsAndconditions')}</Link></li>
             </ul>
           </div>
