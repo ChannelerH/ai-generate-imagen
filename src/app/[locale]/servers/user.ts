@@ -76,3 +76,8 @@ export const getUserByEmail = async (email) => {
     status: 0
   }
 }
+
+export const insertGeneratedImage = async (email, imageUrl) => {
+  const result = await sql`insert into flux_images(email, image) values(${email}, ${imageUrl}) RETURNING *`;
+  return result;
+}
