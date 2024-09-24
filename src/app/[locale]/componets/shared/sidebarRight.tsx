@@ -9,10 +9,17 @@ import { useState } from 'react'; // 导入 useState 钩子
 import axios from 'axios'; // 导入 axios 库
 import { useCommonContext } from '@/app/context/common-context';
 
+import Replicate from "replicate";
+import { apiConfig } from '@/app/[locale]/config/apiconfig';
+
+const replicate = new Replicate();
+
+
 interface SidebarRightProps {
   onNewImage: (url: string) => void; // 接收更新图片 URL 的函数
   setLoading: (loading: boolean) => void; // 接收设置加载状态的函数
 }
+
 
 export const SidebarRight: React.FC<SidebarRightProps> = ({ onNewImage, setLoading }) => {
   const t = useTranslations('ImageModuleText');
@@ -42,26 +49,68 @@ export const SidebarRight: React.FC<SidebarRightProps> = ({ onNewImage, setLoadi
 
     setLoading(true);
 
-    const apiKey = process.env.NEXT_PUBLIC_ZHIPU_API_KEY;
-    const requestData = {
-      model: 'cogview-3',
-      prompt: message,
-      size: '1024x1024',
-    };
-
     try {
-      const response = await axios.post(
-        'https://open.bigmodel.cn/api/paas/v4/images/generations',
-        requestData,
-        {
-          headers: {
-            'Authorization': `Bearer ${apiKey}`,
-            'Content-Type': 'application/json',
-          },
-        });
-      console.log('Response.data:', JSON.stringify(response.data));
-      const firstItem = response.data.data[0];
-      console.log('First Item URL:', firstItem.url);
+      // if (apiConfig.replicate.enabled) {
+
+      const response = await fetch("/api/predictions", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          prompt: message,
+        }),
+      });
+      let prediction = await response.json();
+      console.log("post prediction", prediction);
+
+      if (response.status !== 201) {
+        console.log(prediction.detail);
+        return;
+      }
+      
+   
+      while (
+        prediction.status !== "succeeded" &&
+        prediction.status !== "failed"
+      ) {
+        await new Promise(resolve => setTimeout(resolve, 1000));
+        const response = await fetch("/api/predictions/" + prediction.id);
+        prediction = await response.json();
+        console.log("get prediction", prediction);
+
+        if (response.status !== 200) {
+          console.log(prediction.detail);
+          return;
+        }
+        console.log({ prediction: prediction });
+      }
+
+      if (prediction.status == "succeeded") {
+        onNewImage(prediction.output[0]);
+      }
+
+      // } else if (apiConfig.bigModel.enabled) {
+        // const requestData = {
+        //   model: 'cogview-3',
+        //   prompt: message,
+        //   size: '1024x1024',
+        // };
+        // const response = await axios.post(
+        //   apiConfig.bigModel.url,
+        //   requestData,
+        //   apiConfig.bigModel.headers);
+        // console.log('Response.data:', JSON.stringify(response.data));
+        // const firstItem = response.data.data[0];
+        // console.log('First Item URL:', firstItem.url);
+        // onNewImage(firstItem.url);
+
+      // } else {
+      //   return new Response('No API enabled', { status: 500 });
+      // }
+
+
+      
       
       // const saveImageResponse = await fetch('/api/saveGeneratedImage', {
       //   method: 'POST',
@@ -75,7 +124,7 @@ export const SidebarRight: React.FC<SidebarRightProps> = ({ onNewImage, setLoadi
       //   console.error('Failed to save image to database');
       // }
   
-      onNewImage(firstItem.url);
+     
     } catch (error) {
       console.error('Error:', error);
     } finally {

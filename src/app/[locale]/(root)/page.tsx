@@ -12,6 +12,9 @@ export default function Home() {
   const [loading, setLoading] = useState<boolean>(false); // 存储加载状态
 
   const handleNewImage = (url: string) => {
+    if (imageUrls.length > 5) {
+      setImageUrls((prev) => prev.slice(1));
+    }
     setImageUrls((prev) => [...prev, url]); // 更新图片 URL 列表
   };
 

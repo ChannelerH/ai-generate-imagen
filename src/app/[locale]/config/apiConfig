@@ -1,0 +1,20 @@
+import axios from 'axios';
+
+const apiConfig = {
+  replicate: {
+    enabled: false, // 是否启用 Replicate API
+    // url: `https://api.replicate.com/v1/models/black-forest-labs/flux-schnell/predictions`
+    url: `https://api.replicate.com/v1/models/black-forest-labs/flux-dev/predictions`
+
+  },
+  bigModel: {
+    enabled: true, // 是否启用 BigModel API
+    url: 'https://open.bigmodel.cn/api/paas/v4/images/generations',
+    headers: {
+      'Authorization': `Bearer ${process.env.NEXT_PUBLIC_ZHIPU_API_KEY}`,
+      'Content-Type': 'application/json',
+    },
+  },
+};
+
+export { apiConfig };

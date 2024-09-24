@@ -14,7 +14,15 @@ const nextConfig = {
                 hostname: 'sfile.chatglm.cn',
                 port: '',
                 pathname: '/**', // 允许所有路径
-              },
+            },
+            {
+                protocol: "https",
+                hostname: "replicate.com",
+            },
+            {
+                protocol: "https",
+                hostname: "replicate.delivery",
+            },
         ],
     }
 }
