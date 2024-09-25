@@ -23,6 +23,14 @@ const nextConfig = {
                 protocol: "https",
                 hostname: "replicate.delivery",
             },
+            {
+                protocol: "https",
+                hostname: "r2.flux1.ai",
+            },
+            {
+                protocol: "https",
+                hostname: "cdn.pixabay.com",
+            }
         ],
     }
 }

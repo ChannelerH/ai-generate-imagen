@@ -18,12 +18,16 @@ export async function POST(request) {
     );
   }
  
-  const { prompt } = await request.json();
+  const { prompt, model, ratio } = await request.json(); 
  
   const options = {
-    version: '8beff3369e81422112d93b89ca01426147de542cd4684c244b673b105188fe5f',
-    input: { prompt }
+    model: model,
+    input: {
+      prompt: prompt, // 用户输入的提示
+      aspect_ratio: ratio, // 将 ratio 作为输入参数
+    },
   }
+  console.log("req options: ", options)
  
   if (WEBHOOK_HOST) {
     options.webhook = `${WEBHOOK_HOST}/api/webhooks`

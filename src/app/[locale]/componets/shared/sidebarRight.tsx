@@ -2,21 +2,20 @@
 // 需要将部分组件转换为客户端组件。可以通过在文件顶部添加 "use client" 指令来实现。
 
 import { useTranslations } from 'next-intl';
-import Image from "next/image";
 import { RiRocketLine } from "react-icons/ri";
+import { RiCloseCircleLine } from 'react-icons/ri';
 
 import { useState } from 'react'; // 导入 useState 钩子
-import axios from 'axios'; // 导入 axios 库
 import { useCommonContext } from '@/app/context/common-context';
-
+import { ImageInfo } from '@/app/[locale]/(root)/page';
 import Replicate from "replicate";
-import { apiConfig } from '@/app/[locale]/config/apiconfig';
+import { apiConfig } from '@/app/[locale]/config/apiConfig';
 
 const replicate = new Replicate();
 
 
 interface SidebarRightProps {
-  onNewImage: (url: string) => void; // 接收更新图片 URL 的函数
+  onNewImage: (url: ImageInfo) => void; // 接收更新图片 URL 的函数
   setLoading: (loading: boolean) => void; // 接收设置加载状态的函数
 }
 
@@ -25,10 +24,16 @@ export const SidebarRight: React.FC<SidebarRightProps> = ({ onNewImage, setLoadi
   const t = useTranslations('ImageModuleText');
   const { setShowLoginModal, userData } = useCommonContext();
 
+  // message 设置一个默认值
   const [message, setMessage] = useState(''); // 定义状态来存储 prompt
-  const [selectedRatio, setSelectedRatio] = useState('1:1'); // 默认图片比例为 1:1
+  
+  const [selectedRatio, setSelectedRatio] = useState('16:9'); // 默认图片比例为 1:1
   const [selectedNumber, setSelectedNumber] = useState(1); // 默认图片数量为 1
   const [isValid, setIsValid] = useState(false);
+
+  const handleClear = () => {
+    setMessage(''); // 清空文本域
+  };
 
   const handleButtonClick = async () => {
 
@@ -52,14 +57,18 @@ export const SidebarRight: React.FC<SidebarRightProps> = ({ onNewImage, setLoadi
     try {
       // if (apiConfig.replicate.enabled) {
 
+      const data = {
+        model: 'black-forest-labs/flux-schnell',
+        prompt: message,
+        ratio: selectedRatio,
+      }
+      
       const response = await fetch("/api/predictions", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
         },
-        body: JSON.stringify({
-          prompt: message,
-        }),
+        body: JSON.stringify(data),
       });
       let prediction = await response.json();
       console.log("post prediction", prediction);
@@ -87,7 +96,13 @@ export const SidebarRight: React.FC<SidebarRightProps> = ({ onNewImage, setLoadi
       }
 
       if (prediction.status == "succeeded") {
-        onNewImage(prediction.output[0]);
+        console.log("prediction.output", prediction.output[0]);
+
+        const imageInfo: ImageInfo = {
+          url: prediction.output[0],
+          aspectRatio: selectedRatio,
+        }
+        onNewImage(imageInfo);
       }
 
       // } else if (apiConfig.bigModel.enabled) {
@@ -108,9 +123,6 @@ export const SidebarRight: React.FC<SidebarRightProps> = ({ onNewImage, setLoadi
       // } else {
       //   return new Response('No API enabled', { status: 500 });
       // }
-
-
-      
       
       // const saveImageResponse = await fetch('/api/saveGeneratedImage', {
       //   method: 'POST',
@@ -138,11 +150,13 @@ export const SidebarRight: React.FC<SidebarRightProps> = ({ onNewImage, setLoadi
         <p id="message" className="pb-2">
           {t('inputDescriptionText')}
         </p>
+
         <textarea
           name="message"
           id="message"
           placeholder={t('placeholderText')}
-          className="bg-white/10 border-none bg-graylight ring-1 ring-gray-500 text-white rounded px-2 pt-2 h-10 w-full appearance-none focus:outline-none resize-none transition-all duration-300"
+          rows={4}
+          className="bg-white/10 border-none bg-graylight ring-1 ring-gray-500 text-white rounded px-2 pt-2 h-24  pr-10 w-full appearance-none focus:outline-none resize-none transition-all duration-300"
           value={message}
           onChange={(e) => {
             const newMessage = e.target.value;
@@ -150,30 +164,43 @@ export const SidebarRight: React.FC<SidebarRightProps> = ({ onNewImage, setLoadi
             setIsValid(newMessage.trim() !== '');
           }}
         ></textarea>
+        {message && ( // 只有在有值时才显示清空图标
+            <button
+              onClick={handleClear}
+              className="absolute right-2 top-2 text-gray-500"
+            >
+              <RiCloseCircleLine size={20} />
+              方飞
+            </button>
+          )}
       </div>
 
       <div className="pt-2">
         <div className="pt-2">
           <p className="pb-2">{t('imageRatioText')}</p>
           <div className="flex items-end gap-4"> {/* 设置 flex 布局，子元素底部对齐，间距为 4 */}
-          <span 
+
+            <span 
               className={`border border-gray-500 rounded w-12 h-14 flex items-center justify-center ${selectedRatio === '2:3' ? 'bg-primary text-white' : 'bg-white/10 text-white'}`} 
               onClick={() => setSelectedRatio('2:3')} // 点击时设置比例为 2:3
             >
               2:3 {/* 图片比例选项 */}
             </span>
+
             <span 
               className={`border border-gray-500 rounded w-12 h-12 flex items-center justify-center ${selectedRatio === '1:1' ? 'bg-primary text-white' : 'bg-white/10 text-white'}`} 
               onClick={() => setSelectedRatio('1:1')} // 点击时设置比例为 1:1
             >
               1:1 {/* 图片比例选项 */}
             </span>
+
             <span 
               className={`border border-gray-500 rounded w-16 h-12 flex items-center justify-center ${selectedRatio === '16:9' ? 'bg-primary text-white' : 'bg-white/10 text-white'}`} 
               onClick={() => setSelectedRatio('16:9')} // 点击时设置比例为 16:9
             >
               16:9 {/* 图片比例选项 */}
             </span>
+
           </div>
         </div>
       </div>
